@@ -45,4 +45,8 @@ public class Tank {
     public int health() {
         return getHealth();
     }
+
+    public void repair(int value){
+        setHealth(getHealth() + value);
+    }
 }

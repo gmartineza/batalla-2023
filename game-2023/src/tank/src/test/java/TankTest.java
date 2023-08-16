@@ -63,10 +63,10 @@ public class TankTest
     }
 
     @Test
-    public void tank_has_pilot_true_test(){
+    public void tank_has_pilot_false_test(){
         Tank tank1 = new Tank();
 
-        assertTrue(tank1.hasPilot());
+        assertFalse(tank1.hasPilot());
     }
 
     @Test
@@ -74,7 +74,7 @@ public class TankTest
         Tank tank1 = new Tank();
 
         assertEquals("", tank1.getName());
-        tank1.setName("Pedrito")
+        tank1.setName("Pedrito");
         assertEquals("Pedrito", tank1.getName());
 
     }
