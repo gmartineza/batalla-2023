@@ -14,7 +14,7 @@ public abstract class MilitaryAsset {
         return health;
     }
 
-    private void setHealth(double value){
+    public void setHealth(double value){
         health = value;
     }
 

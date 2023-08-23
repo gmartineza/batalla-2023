@@ -7,20 +7,17 @@ public class Tank extends MilitaryAsset{
 
     private Soldier pilot = null;
 
-    private Soldier getPilot(){
-        return pilot;
-    }
-
     public void setPilot(Soldier value){
         pilot = value;
     }
     
     public boolean hasPilot(){
-        if (getPilot() == null){
-            return false;
-        }
-        else {
-            return true;
+        return pilot != null;
+    }
+
+    public void reinforce(double amount){
+        if(getHealth() > 0){
+            setHealth(getHealth() + amount);
         }
     }
 
