@@ -4,6 +4,12 @@ public abstract class MilitaryAsset {
     private double health;
     private String name;
 
+    public MilitaryAsset(){
+        super();
+        setName("x");
+        setHealth(5.0);
+    }
+
     public double getHealth(){
         return health;
     }
@@ -24,11 +30,15 @@ public abstract class MilitaryAsset {
         return getHealth() > 0;
     }
 
-    public void damage(int amount) {
-        setHealth(getHealth()  - amount);
+    public void damage(double amount) {
+        setHealth(getHealth() - amount);
     }
 
     public void repair(int value){
         setHealth(getHealth() + value);
+    }
+
+    public void attack(MilitaryAsset target){
+        target.damage(1.0);
     }
 }

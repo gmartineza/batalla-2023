@@ -15,4 +15,9 @@ public class Tank extends MilitaryAsset{
             return false;
         }
     }
+
+    @Override
+    public void attack(MilitaryAsset target){
+        target.damage(3.0);
+    }
 }
