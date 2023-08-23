@@ -1,14 +1,22 @@
 package battle2023.ucp;
 
 public class Tank extends MilitaryAsset{
-    private String pilot;
+    public Tank(){
+        super();
+    }
 
-    private String getPilot(){
+    private Soldier pilot = null;
+
+    private Soldier getPilot(){
         return pilot;
     }
 
+    public void setPilot(Soldier value){
+        pilot = value;
+    }
+    
     public boolean hasPilot(){
-        if (getPilot() == null || getPilot() == ""){
+        if (getPilot() == null){
             return false;
         }
         else {
