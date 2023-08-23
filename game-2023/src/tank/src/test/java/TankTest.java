@@ -38,11 +38,11 @@ public class TankTest
 
         tank1.damage(1);
 
-        assertEquals(4, tank1.health());
+        assertEquals(4.0, tank1.getHealth());
 
         tank1.damage(4);
 
-        assertEquals(0, tank1.health());
+        assertEquals(0.0, tank1.getHealth());
         assertFalse(tank1.isAlive());
     }
 
@@ -54,11 +54,11 @@ public class TankTest
         tank1.damage(4);
         tank1.repair(1);
 
-        assertEquals(2, tank1.health());
+        assertEquals(2.0, tank1.getHealth());
 
         tank1.repair(4);
 
-        assertEquals(6, tank1.health());
+        assertEquals(6.0, tank1.getHealth());
         assertTrue(tank1.isAlive());
     }
 
