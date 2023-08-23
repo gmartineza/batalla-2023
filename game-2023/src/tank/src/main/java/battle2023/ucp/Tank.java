@@ -8,11 +8,11 @@ public class Tank extends MilitaryAsset{
     }
 
     public boolean hasPilot(){
-        if (getPilot() != null){
-            return true;
+        if (getPilot() == null || getPilot() == ""){
+            return false;
         }
         else {
-            return false;
+            return true;
         }
     }
 
